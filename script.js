@@ -1,6 +1,4 @@
-/* =========================
-   LOGIN VALIDATION
-========================= */
+/*LOGIN VALIDATION */
 
 let form = document.querySelector("form");
 
@@ -26,9 +24,7 @@ alert("Login Successful! Welcome to Kuchipudi");
 }
 
 
-/* =========================
-   JOIN FORM SUCCESS MESSAGE
-========================= */
+/* ================= JOIN FORM SUCCESS MESSAGE ================= */
 
 function showMessage(event){
 event.preventDefault();
@@ -41,9 +37,7 @@ msg.style.display = "block";
 }
 
 
-/* =========================
-   MUDRA PRACTICE TRACKER
-========================= */
+/* MUDRA PRACTICE TRACKER  */
 
 let asamyuta = Number(localStorage.getItem("asamyuta")) || 0;
 let samyuta = Number(localStorage.getItem("samyuta")) || 0;
@@ -106,152 +100,50 @@ document.getElementById("samyutaBar").style.width = sProgress + "%";
 
 }
 
-/* Load values when page opens */
+/* Load saved values when page opens */
 
 window.onload = updateDisplay;
 
-// Dark Mode Toggle
+
+/* ================= DARK MODE TOGGLE ================= */
 
 const toggleBtn = document.getElementById("themeToggle");
 
-toggleBtn.onclick = function(){
+if(toggleBtn){
 
-document.body.classList.toggle("dark-mode");
+const body = document.body;
 
-if(document.body.classList.contains("dark-mode")){
-toggleBtn.innerHTML = "☀";
+/* Load saved theme */
+
+if(localStorage.getItem("theme") === "dark"){
+body.classList.add("dark-mode");
+toggleBtn.textContent = "☀️";
+}
+
+/* Toggle theme */
+
+toggleBtn.addEventListener("click", function(){
+
+body.classList.toggle("dark-mode");
+
+if(body.classList.contains("dark-mode")){
+localStorage.setItem("theme", "dark");
+toggleBtn.textContent = "☀️";
 }
 else{
-toggleBtn.innerHTML = "🌙";
+localStorage.setItem("theme", "light");
+toggleBtn.textContent = "🌙";
 }
 
-};
-
-/* Load saved values */
-
-let asamyuta = localStorage.getItem("asamyuta") || 0;
-let samyuta = localStorage.getItem("samyuta") || 0;
-
-asamyuta = Number(asamyuta);
-samyuta = Number(samyuta);
-
-updateDisplay();
-
-/* Asamyuta counter */
-
-function addAsamyuta(){
-
-if(asamyuta < 28){
-asamyuta++;
-localStorage.setItem("asamyuta", asamyuta);
-updateDisplay();
-}
-else{
-alert("You have completed all 28 Asamyuta Mudras!");
-}
+});
 
 }
 
-function resetAsamyuta(){
+function showMessage(event){
+event.preventDefault(); // stops page refresh
 
-asamyuta = 0;
-localStorage.setItem("asamyuta", asamyuta);
-updateDisplay();
-
+document.getElementById("successMessage").style.display = "block";
 }
 
-/* Samyuta counter */
-
-function addSamyuta(){
-
-if(samyuta < 24){
-samyuta++;
-localStorage.setItem("samyuta", samyuta);
-updateDisplay();
-}
-else{
-alert("You have completed all 24 Samyuta Mudras!");
-}
-
-}
-
-function resetSamyuta(){
-
-samyuta = 0;
-localStorage.setItem("samyuta", samyuta);
-updateDisplay();
-
-}
-
-/* Load saved values */
-
-let asamyuta = localStorage.getItem("asamyuta") || 0;
-let samyuta = localStorage.getItem("samyuta") || 0;
-
-asamyuta = Number(asamyuta);
-samyuta = Number(samyuta);
-
-updateDisplay();
-
-/* Asamyuta counter */
-
-function addAsamyuta(){
-
-if(asamyuta < 28){
-asamyuta++;
-localStorage.setItem("asamyuta", asamyuta);
-updateDisplay();
-}
-else{
-alert("You have completed all 28 Asamyuta Mudras!");
-}
-
-}
-
-function resetAsamyuta(){
-
-asamyuta = 0;
-localStorage.setItem("asamyuta", asamyuta);
-updateDisplay();
-
-}
-
-/* Samyuta counter */
-
-function addSamyuta(){
-
-if(samyuta < 24){
-samyuta++;
-localStorage.setItem("samyuta", samyuta);
-updateDisplay();
-}
-else{
-alert("You have completed all 24 Samyuta Mudras!");
-}
-
-}
-
-function resetSamyuta(){
-
-samyuta = 0;
-localStorage.setItem("samyuta", samyuta);
-updateDisplay();
-
-}
-
-/* Update display */
-
-function updateDisplay(){
-
-document.getElementById("asamyutaCount").innerText = asamyuta;
-document.getElementById("samyutaCount").innerText = samyuta;
-
-let aProgress = (asamyuta/28)*100;
-let sProgress = (samyuta/24)*100;
-
-document.getElementById("asamyutaBar").style.width = aProgress + "%";
-document.getElementById("samyutaBar").style.width = sProgress + "%";
-
-}
 
 
