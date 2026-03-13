@@ -140,10 +140,15 @@ toggleBtn.textContent = "🌙";
 }
 
 function showMessage(event){
-event.preventDefault(); // stops page refresh
 
-document.getElementById("successMessage").style.display = "block";
+event.preventDefault();   // stops page reload
+
+let message = document.getElementById("successMessage");
+
+if(message){
+message.style.display = "block";
 }
 
+}
 
 
