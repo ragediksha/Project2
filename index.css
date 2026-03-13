@@ -1,4 +1,4 @@
-/* ================= GENERAL ================= */
+/* GENERAL */
 
 body{
 font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@ html{
 scroll-behavior:smooth;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 
 .navbar{
 background:#7b1e3a;
@@ -37,7 +37,7 @@ font-weight:500;
 color:#ffd9a6 !important;
 }
 
-/* ================= INTRO SECTION ================= */
+/*  INTRO SECTION  */
 
 #intro{
 max-width:800px;
@@ -49,7 +49,19 @@ color:#7b1e3a;
 margin-bottom:15px;
 }
 
-/* ================= CARDS ================= */
+/* Same background style for Mudra and Video sections */
+
+#mudra,
+#video-link{
+background:#fff3e6;
+border-left:6px solid #7b1e3a;
+padding:25px;
+border-radius:10px;
+max-width:800px;
+margin:40px auto;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+/*  CARDS  */
 
 .card{
 border:none;
@@ -62,7 +74,7 @@ transform:translateY(-6px);
 background:#fff3e6;
 }
 
-/* ================= GALLERY ================= */
+/* GALLERY */
 
 #gallery img{
 transition:0.4s;
@@ -79,7 +91,7 @@ transform:scale(1.08);
 color:#7b1e3a;
 }
 
-/* ================= STORY PAGE ================= */
+/* STORY PAGE */
 
 .story-box{
 background:#fff3e6;
@@ -91,7 +103,7 @@ margin:auto;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* ================= VIDEO PAGE ================= */
+/*  VIDEO PAGE  */
 
 video{
 margin-top:20px;
@@ -104,7 +116,7 @@ margin-top:20px;
 border-radius:10px;
 }
 
-/* ================= TABLE (Mudra Page) ================= */
+/*  TABLE (Mudra Page)  */
 
 table{
 margin:30px auto;
@@ -127,7 +139,7 @@ tr:nth-child(even){
 background:#f2f2f2;
 }
 
-/* ================= COUNTER BOXES ================= */
+/*  COUNTER BOXES  */
 
 .counter-container{
 display:flex;
@@ -152,7 +164,7 @@ color:#7b1e3a;
 margin:10px 0;
 }
 
-/* ================= LOGIN PAGE ================= */
+/* LOGIN PAGE  */
 
 .login-container{
 background:white;
@@ -212,7 +224,7 @@ font-size:14px;
 text-decoration:underline;
 }
 
-/* ================= FORMS ================= */
+/*  FORMS */
 
 .join-box{
 background:#fff3e6;
@@ -230,7 +242,7 @@ display:block;
 margin-top:15px;
 }
 
-/* ================= BUTTONS ================= */
+/*  BUTTONS  */
 
 button{
 padding:10px 20px;
@@ -247,7 +259,7 @@ background:#5a142a;
 transform:scale(1.05);
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER  */
 
 footer{
 background:#7b1e3a;
@@ -256,39 +268,34 @@ padding:15px;
 margin-top:40px;
 }
 
-/* ================= DARK MODE ================= */
+/*  DARK MODE  */
 
 .dark-mode{
-background:#1f1f1f;
+background:#121212;
 color:white;
 }
 
 .dark-mode .card{
-background:#2a2a2a;
+background:#1e1e1e;
 color:white;
 }
 
-.dark-mode .story-box{
-background:#2a2a2a;
-}
-
-.dark-mode .counter-box{
-background:#2a2a2a;
+.dark-mode .navbar{
+background:#000;
 }
 
 .dark-mode footer{
-background:#3b0a1a;
+background:#000;
+color:white;
 }
-
-.dark-mode .navbar{
-background:#3b0a1a;
+.dark-mode .story-box{
+background:#2a2a2a;
 }
-
 .dark-mode table{
 background:#2a2a2a;
 color:white;
 }
-/* ================= PAGE NAVIGATION LINKS ================= */
+/*  PAGE NAVIGATION LINKS  */
 
 .page-nav{
 margin-top:20px;
@@ -334,7 +341,7 @@ display:block;
 margin:10px auto 0;
 border-radius:2px;
 }
-/* ================= VIDEO SUB HEADINGS ================= */
+/*  VIDEO SUB HEADINGS  */
 
 .video-subtitle{
 font-size:24px;
@@ -371,9 +378,7 @@ border-radius:2px;
 .reel-btn:hover{
     background:#5f1f29;
 }
-/* ================= LOGIN PAGE BACKGROUND ================= */
-
-/* ================= LOGIN PAGE BACKGROUND ================= */
+/*  LOGIN PAGE BACKGROUND  */
 
 .login-page{
 background-image: url("Dance background.png"); /* your image path */
@@ -398,4 +403,59 @@ background:rgba(0,0,0,0.4);
 .login-container{
 position:relative;
 z-index:2;
+}
+
+/* Headings for Mudra and Video pages */
+
+.page-heading{
+text-align:center;
+font-size:36px;
+color:#7b1e3a;
+margin-top:30px;
+margin-bottom:20px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.sub-heading{
+text-align:center;
+font-size:22px;
+color:#b08d57;
+margin-bottom:30px;
+}
+/* Main heading style */
+
+h1{
+text-align:center;
+font-size:40px;
+color:#7b1e3a;
+margin-top:30px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+/* Section headings */
+
+h2{
+text-align:center;
+font-size:32px;
+color:#7b1e3a;
+margin-bottom:20px;
+position:relative;
+}
+
+/* Decorative line under headings */
+
+h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#b08d57;
+margin:10px auto 0;
+border-radius:2px;
+}
+h2:hover{
+transform:scale(1.03);
+transition:0.3s;
 }
