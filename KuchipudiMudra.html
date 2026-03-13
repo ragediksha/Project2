@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kuchipudi Mudras</title>
+<link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+<h1>Kuchipudi Mudras</h1>
+
+<nav>
+<div class="page-nav">
+
+<a href="index.html">Home</a>
+<a href="Story.html">Story</a>
+<a href="LearningVideos.html">Mudras</a>
+
+</div>
+</nav>
+
+<p>
+In Kuchipudi dance, hand gestures are called <b>Hasta Mudras</b>. 
+They help dancers express emotions, actions, and stories through hand movements.
+There are two main types of mudras used in Kuchipudi dance.
+</p>
+
+<h2>Types of Kuchipudi Mudras</h2>
+
+<table>
+
+<tr>
+<th>Type of Mudra</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+
+<tr>
+<td><b>Asamyuta Hasta Mudras</b></td>
+<td>These mudras are performed using a single hand.</td>
+<td>Pataka, Tripataka, Ardhapataka, Katakamukha, Mayura, Ardhachara,Arala...............</td>
+</tr>
+
+<tr>
+<td><b>Samyukta Hasta Mudras</b></td>
+<td>These mudras are performed using both hands together.</td>
+<td>Anjali, Kapotam, Karkata, Swasthika, Dola, Pushapaputo, Utsunga,...........</td>
+</tr>
+
+</table>
+
+
+<h2>Daily Mudra Practice Tracker</h2>
+
+<div class="counter-container">
+
+<!-- Asamyuta Counter -->
+
+<div class="counter-box">
+
+<h3>Asamyuta Hasta Mudras</h3>
+
+<div class="counter" id="asamyutaCount">0</div>
+
+<button onclick="addAsamyuta()">+1 Learned</button>
+<button class="reset-btn" onclick="resetAsamyuta()">Reset</button>
+
+<p>Progress (28 Mudras)</p>
+
+<div class="progress-container">
+<div class="progress-bar" id="asamyutaBar"></div>
+</div>
+
+</div>
+
+
+<!-- Samyuta Counter -->
+
+<div class="counter-box">
+
+<h3>Samyuta Hasta Mudras</h3>
+
+<div class="counter" id="samyutaCount">0</div>
+
+<button onclick="addSamyuta()">+1 Learned</button>
+<button class="reset-btn" onclick="resetSamyuta()">Reset</button>
+
+<p>Progress (24 Mudras)</p>
+
+<div class="progress-container">
+<div class="progress-bar" id="samyutaBar"></div>
+</div>
+
+</div>
+
+</div>
+
+
+<br><br>
+
+<button onclick="window.location.href='loginpage.html'">
+logout
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
